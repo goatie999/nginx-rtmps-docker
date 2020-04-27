@@ -1,0 +1,12 @@
+setuid = stunnel4
+setgid = stunnel4
+pid=/tmp/stunnel.pid
+output = /var/log/stunnel4/stunnel.log
+;include = /etc/stunnel/conf.d
+debug = 5
+
+[fb-live]
+client = yes
+accept = 19350
+connect = live-api-s.facebook.com:443
+verifyChain = no

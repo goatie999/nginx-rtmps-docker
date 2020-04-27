@@ -19,6 +19,27 @@ RUN echo "ENABLED=1" >> /etc/default/stunnel4
 # Expose services to host
 EXPOSE 1935
 
-# Initialise Services
-CMD ["stunnel, "/etc/stunnel/stunnel.conf"]
+# Forward logs to Docker
+RUN ln -sf /dev/stdout /var/log/nginx/access.log && \
+    ln -sf /dev/stderr /var/log/nginx/error.log && \
+    ln -sf /dev/stdout /var/log/stunnel4/stunnel.log
+    
+#Setup Streaming Services Details
+#Facebook
+ENV FACEBOOK_URL rtmp://localhost:19350/rtmp/
+ENV FACEBOOK_KEY ""
+
+#Restream.io
+ENV RESTREAM_URL rtmp://live.restream.io/live/
+ENV RESTREAM_KEY ""
+
+COPY entrypoint.sh /dentrypoint.sh
+
+RUN chmod +x /entrypoint.sh
+
+EXPOSE 1935
+
+ENTRYPOINT ["entrypoint.sh"]
+
+# Initialise nginx
 CMD ["nginx", "-g", "daemon off;"]

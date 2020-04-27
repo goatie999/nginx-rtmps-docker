@@ -6,15 +6,17 @@ LABEL maintainer="Mark Ley"
 RUN apt-get update && \
 	apt-get install -y nano nginx libnginx-mod-rtmp stunnel4
 
+# Import setting files and set new files
 COPY nginx.setup /etc/nginx/nginx.setup
 COPY stunnel.setup /etc/stunnel/stunnel.conf
-
-RUN more /etc/nginx/nginx.setup >> /etc/nginx/nginx.conf
-
-RUN echo "ENABLED=1" >> /etc/default/stunnel4
-
 RUN touch /var/logs/stunnel4/stunnel.log
 
+
+# Make any configuration changes to nginx anf stunnel
+RUN more /etc/nginx/nginx.setup >> /etc/nginx/nginx.conf
+RUN echo "ENABLED=1" >> /etc/default/stunnel4
+
+# Expose services to host
 EXPOSE 1935
 
 # Initialise Services

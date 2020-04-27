@@ -39,7 +39,7 @@ RUN chmod +x /entrypoint.sh
 
 EXPOSE 1935
 
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 
 # Initialise nginx
 CMD ["nginx", "-g", "daemon off;"]

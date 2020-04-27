@@ -9,7 +9,7 @@ RUN apt-get update && \
 # Import setting files and set new files
 COPY nginx.setup /etc/nginx/nginx.setup
 COPY stunnel.setup /etc/stunnel/stunnel.conf
-RUN touch /var/logs/stunnel4/stunnel.log
+RUN touch /var/log/stunnel4/stunnel.log
 
 
 # Make any configuration changes to nginx anf stunnel

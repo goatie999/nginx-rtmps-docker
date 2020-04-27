@@ -33,7 +33,7 @@ ENV FACEBOOK_KEY ""
 ENV RESTREAM_URL rtmp://live.restream.io/live/
 ENV RESTREAM_KEY ""
 
-COPY entrypoint.sh /dentrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh
 

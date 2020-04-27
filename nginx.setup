@@ -1,3 +1,6 @@
+
+# RTMP Related Settings for NGINX service
+
 rtmp_auto_push on;
 rtmp_auto_push_reconnect 1s;
 

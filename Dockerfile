@@ -13,7 +13,7 @@ RUN touch /var/log/stunnel4/stunnel.log
 
 
 # Make any configuration changes to nginx anf stunnel
-RUN more /etc/nginx/nginx.setup >> /etc/nginx/nginx.conf
+# RUN more /etc/nginx/nginx.setup >> /etc/nginx/nginx.conf
 RUN echo "ENABLED=1" >> /etc/default/stunnel4
 
 # Expose services to host

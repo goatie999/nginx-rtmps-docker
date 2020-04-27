@@ -13,6 +13,8 @@ RUN echo "ENABLED=1" >> /etc/default/stunnel4
 
 RUN touch /var/logs/stunnel4/stunnel.log
 
+EXPOSE 1935
+
 # Initialise Services
 RUN stunnel /etc/stunnel/stunnel.conf
 CMD ["nginx", "-g", "daemon off;"]

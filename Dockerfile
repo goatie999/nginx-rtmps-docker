@@ -21,8 +21,8 @@ EXPOSE 1935
 
 # Forward logs to Docker
 RUN ln -sf /dev/stdout /var/log/nginx/access.log && \
-    ln -sf /dev/stderr /var/log/nginx/error.log && \
-    ln -sf /dev/stdout /var/log/stunnel4/stunnel.log
+    ln -sf /dev/stderr /var/log/nginx/error.log
+#    ln -sf /dev/stdout /var/log/stunnel4/stunnel.log
     
 #Setup Streaming Services Details
 #Facebook

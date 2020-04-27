@@ -7,7 +7,9 @@ RUN apt-get update && \
 	apt-get install -y nano nginx libnginx-mod-rtmp stunnel4
 
 COPY nginx.setup /etc/nginx/nginx.setup
-COPY stunnel.setup /etc/stunnel/stunnel.setup
+COPY stunnel.setup /etc/stunnel/stunnel.conf
+
+RUN more /etc/nginx/nginx.setup >> /etc/nginx/nginx.conf
 
 RUN echo "ENABLED=1" >> /etc/default/stunnel4
 

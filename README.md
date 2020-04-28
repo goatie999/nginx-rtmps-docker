@@ -33,7 +33,10 @@ You don't have to use all of the providers in this setup, any that you leave the
     **\<Provider\>\_URL** - these are pre-defined for you and don't specifically need to be used.  They are provided in case alterations are required before I get up update the official release.
     **\<Provider\>\_KEY** - how you define your unique stream key that the container will consume on start
 ```bash
-docker run -d -p <your port>:1935 -e <Provider1>_KEY=<your Provider 1 stream key> -e <Provider2>_KEY=<your Provider 2 stream key> goatie999/nginx-rtmps:<tag>
+docker run -d -p <your port>:1935 
+   -e <Provider1>_KEY=<your Provider 1 stream key> 
+   -e <Provider2>_KEY=<your Provider 2 stream key> 
+   goatie999/nginx-rtmps:<tag>
 ```
 
 

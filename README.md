@@ -41,7 +41,7 @@ _docker run -d -p \<your port\>:1935 -e \<Provider1\>\_KEY=\<your Provider 1 str
 
 This should work for any streaming software that allows you to define a custom RTMP streaming server.  I've tested with OBS and Streamlabs OBS (SLOBS).  Within the settings of the streaming software, set the stream server to be:
 
-_rtmp://<Server IP Address / FQDN>:<Chosen Port Number>/live_
+_rtmp://\<Server IP Address / FQDN\>\:\<Chosen Port Number\>/live_
 
 The stream key field in OBS / SLOBS can be left blank
 

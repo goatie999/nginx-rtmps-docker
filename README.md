@@ -18,7 +18,7 @@ You don't have to use all of the providers in this setup, any that you leave the
 
 3: From the 'Port Settings' tab, define the 'Local Port' number that you'd like to access the container via, or leave as Auto if you don't mind Synology changing this each time you restart the container.
 
-4: Open the 'Environment' tab.  Here's the most critical part.  Here you must enter your unique Stream Key(s) for the services that you want the container to multi-stream to.  To this by locating your stream key from the settings of your streaming service provider(s) and copy/paste your stream key into the relevant 'Value' section for the **<Provider>\_KEY** variable.
+4: Open the 'Environment' tab.  Here's the most critical part.  Here you must enter your unique Stream Key(s) for the services that you want the container to multi-stream to.  To this by locating your stream key from the settings of your streaming service provider(s) and copy/paste your stream key into the relevant 'Value' section for the **\<Provider\>\_KEY** variable.
   
 4.1: It is not required but if you do want to update the URL used for the streaming provider (i.e. to set a specific geoprahic ingest server for that provider), then you can do this from the 'Environment' tab also.
 

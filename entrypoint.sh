@@ -21,8 +21,6 @@ else
     sed -i 's|#restream| |g' /etc/nginx/nginx.conf 
 fi
 
-sed "s/%NAME%/${HNAME//&/\\&}/g" file
-
 stunnel4
 
 exec "$@"

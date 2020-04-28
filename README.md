@@ -10,7 +10,7 @@ You don't have to use all of the providers in this setup, any that you leave the
 
 
 
-**SYNOLOGY INSTRUCTIONS:**
+ ## SYNOLOGY INSTRUCTIONS:
 
 1: If you're using the Synology GUI, once you have downloaded the required release from the 'Registry' (**goatie999/nginx-rtmps:\<tag\>**), launch container from the 'Image' menu.
 
@@ -26,23 +26,23 @@ You don't have to use all of the providers in this setup, any that you leave the
 
 
 
-**COMMAND LINE INSTRUCTIONS:**
+## COMMAND LINE INSTRUCTIONS:
 
 * Streaming Providers: **FACEBOOK**, **RESTREAM**
 * Available environment variables:
     **\<Provider\>\_URL** - these are pre-defined for you and don't specifically need to be used.  They are provided in case alterations are required before I get up update the official release.
     **\<Provider\>\_KEY** - how you define your unique stream key that the container will consume on start
+```bash
+docker run -d -p \<your port\>:1935 -e \<Provider1\>\_KEY=\<your Provider 1 stream key\> -e \<Provider2\>\_KEY=\<your Provider 2 stream key\> goatie999/nginx-rtmps:\<tag\>
+```
 
-_docker run -d -p \<your port\>:1935 -e \<Provider1\>\_KEY=\<your Provider 1 stream key\> -e \<Provider2\>\_KEY=\<your Provider 2 stream key\> goatie999/nginx-rtmps:\<tag\>_
 
-
-
-**STREAMING SOFTWARE SETUP:**
+## STREAMING SOFTWARE SETUP:
 
 This should work for any streaming software that allows you to define a custom RTMP streaming server.  I've tested with OBS and Streamlabs OBS (SLOBS).  Within the settings of the streaming software, set the stream server to be:
-
-_rtmp://\<Server IP Address / FQDN\>\:\<Chosen Port Number\>/live_
-
+```bash
+rtmp://\<Server IP Address / FQDN\>\:\<Chosen Port Number\>/live
+```
 The stream key field in OBS / SLOBS can be left blank
 
 Save your setting and you're now ready to 'go-live!'
@@ -50,9 +50,9 @@ Save your setting and you're now ready to 'go-live!'
 
 
 
-**Thanks and Links**
+## Thanks and Links:
 
-Thanks to thiagoeolima/nginx-rtmps and JasonRivers/Docker-nginx-rtmp for inspiration and code snippets to get my container operational as I wanted / needed it.
+Thanks to [thiagoeolima/nginx-rtmps](https://github.com/thiagoeolima/nginx-rtmps) and [JasonRivers/Docker-nginx-rtmp](https://github.com/JasonRivers/Docker-nginx-rtmp) for inspiration and code snippets to get my container operational as I wanted / needed it.
 
 Docker Hub: https://hub.docker.com/r/goatie999/nginx-rtmps
 

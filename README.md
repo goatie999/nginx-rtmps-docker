@@ -1,4 +1,5 @@
 # nginx-rtmps-docker
+
 Docker container to enable local multi-streaming to different services via RTMP and RTMPS
 
 As of release v0.2.5 / latest, this container is set to utilise 2 services, Restream.io and Facebook Live.  This container makes use of stunnel4 in order to work with Facebook's specification that only support RTMPS and is built as an internal service to make this function correctly.
@@ -10,6 +11,7 @@ You don't have to use all of the providers in this setup, any that you leave the
 
 
 **SYNOLOGY INSTRUCTIONS:**
+
 1: If you're using the Synology GUI, once you have downloaded the required release from the 'Registry' (goatie999/nginx-rtmps:<tag>), launch container from the 'Image' menu.
 
 2: From the 'Create Container' window, rename the container as required and click the 'Advanced Settings' button.
@@ -25,6 +27,7 @@ You don't have to use all of the providers in this setup, any that you leave the
 
 
 **COMMAND LINE INSTRUCTIONS:**
+
 * Streaming Providers: FACEBOOK, RESTREAM
 * Available environment variables:
     <Provider>_URL - these are pre-defined for you and don't specifically need to be used.  They are provided in case alterations are required before I get up update the official release.
@@ -35,6 +38,7 @@ docker run -d -p <your port>:1935 -e <Provider1>_KEY=<your Provider 1 stream key
 
 
 **STREAMING SOFTWARE SETUP:**
+
 This should work for any streaming software that allows you to define a custom RTMP streaming server.  I've tested with OBS and Streamlabs OBS (SLOBS).  Within the settings of the streaming software, set the stream server to be:
 
 rtmp://<Server IP Address / FQDN>:<Chosen Port Number>/live
@@ -47,6 +51,7 @@ Save your setting and you're now ready to 'go-live!'
 
 
 **Thanks and Links**
+
 Thanks to thiagoeolima/nginx-rtmps and JasonRivers/Docker-nginx-rtmp for inspiration and code snippets to get my container operational as I wanted / needed it.
 
 Docker Hub: https://hub.docker.com/r/goatie999/nginx-rtmps

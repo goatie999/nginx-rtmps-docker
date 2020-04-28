@@ -33,7 +33,7 @@ You don't have to use all of the providers in this setup, any that you leave the
     **\<Provider\>\_URL** - these are pre-defined for you and don't specifically need to be used.  They are provided in case alterations are required before I get up update the official release.
     **\<Provider\>\_KEY** - how you define your unique stream key that the container will consume on start
 ```bash
-docker run -d -p \<your port\>:1935 -e \<Provider1\>\_KEY=\<your Provider 1 stream key\> -e \<Provider2\>\_KEY=\<your Provider 2 stream key\> goatie999/nginx-rtmps:\<tag\>
+docker run -d -p <your port>:1935 -e <Provider1>_KEY=<your Provider 1 stream key> -e <Provider2>_KEY=<your Provider 2 stream key> goatie999/nginx-rtmps:<tag>
 ```
 
 
@@ -41,7 +41,7 @@ docker run -d -p \<your port\>:1935 -e \<Provider1\>\_KEY=\<your Provider 1 stre
 
 This should work for any streaming software that allows you to define a custom RTMP streaming server.  I've tested with OBS and Streamlabs OBS (SLOBS).  Within the settings of the streaming software, set the stream server to be:
 ```bash
-rtmp://\<Server IP Address / FQDN\>\:\<Chosen Port Number\>/live
+rtmp://<Server IP Address / FQDN>:<Chosen Port Number>/live
 ```
 The stream key field in OBS / SLOBS can be left blank
 

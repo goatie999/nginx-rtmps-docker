@@ -12,13 +12,13 @@ You don't have to use all of the providers in this setup, any that you leave the
 
 **SYNOLOGY INSTRUCTIONS:**
 
-1: If you're using the Synology GUI, once you have downloaded the required release from the 'Registry' (goatie999/nginx-rtmps:<tag>), launch container from the 'Image' menu.
+1: If you're using the Synology GUI, once you have downloaded the required release from the 'Registry' (**goatie999/nginx-rtmps:\<tag\>**), launch container from the 'Image' menu.
 
 2: From the 'Create Container' window, rename the container as required and click the 'Advanced Settings' button.
 
-3: From the 'Port Settings' tab, define the 'Local Port' number that you'd like to access the container via, or leave as Auto if you don't mind Synology changing this each time you restart the container.
+3: From the 'Port Settings' tab, define the **'Local Port'** number that you'd like to access the container via, or leave as Auto if you don't mind Synology changing this each time you restart the container.
 
-4: Open the 'Environment' tab.  Here's the most critical part.  Here you must enter your unique Stream Key(s) for the services that you want the container to multi-stream to.  To this by locating your stream key from the settings of your streaming service provider(s) and copy/paste your stream key into the relevant 'Value' section for the **\<Provider\>\_KEY** variable.
+4: Open the 'Environment' tab.  Here's the most critical part.  Here you must enter your unique Stream Key(s) for the services that you want the container to multi-stream to.  To this by locating your stream key from the settings of your streaming service provider(s) and copy/paste your stream key into the relevant **'Value'** section for the **\<Provider\>\_KEY** variable.
   
 4.1: It is not required but if you do want to update the URL used for the streaming provider (i.e. to set a specific geoprahic ingest server for that provider), then you can do this from the 'Environment' tab also.
 
@@ -28,12 +28,12 @@ You don't have to use all of the providers in this setup, any that you leave the
 
 **COMMAND LINE INSTRUCTIONS:**
 
-* Streaming Providers: FACEBOOK, RESTREAM
+* Streaming Providers: **FACEBOOK**, **RESTREAM**
 * Available environment variables:
     **\<Provider\>\_URL** - these are pre-defined for you and don't specifically need to be used.  They are provided in case alterations are required before I get up update the official release.
     **\<Provider\>\_KEY** - how you define your unique stream key that the container will consume on start
 
-docker run -d -p \<your port\>:1935 -e \<Provider1\>\_KEY=\<your Provider 1 stream key\> -e \<Provider2\>\_KEY=\<your Provider 2 stream key\> goatie999/nginx-rtmps:\<tag\>
+_docker run -d -p \<your port\>:1935 -e \<Provider1\>\_KEY=\<your Provider 1 stream key\> -e \<Provider2\>\_KEY=\<your Provider 2 stream key\> goatie999/nginx-rtmps:\<tag\>_
 
 
 
@@ -41,7 +41,7 @@ docker run -d -p \<your port\>:1935 -e \<Provider1\>\_KEY=\<your Provider 1 stre
 
 This should work for any streaming software that allows you to define a custom RTMP streaming server.  I've tested with OBS and Streamlabs OBS (SLOBS).  Within the settings of the streaming software, set the stream server to be:
 
-rtmp://<Server IP Address / FQDN>:<Chosen Port Number>/live
+_rtmp://<Server IP Address / FQDN>:<Chosen Port Number>/live_
 
 The stream key field in OBS / SLOBS can be left blank
 

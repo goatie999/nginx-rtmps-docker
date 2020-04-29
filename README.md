@@ -20,7 +20,7 @@ You don't have to use all of the providers in this setup, any that you leave the
 
 4. Open the 'Environment' tab.  Here's the most critical part.  Here you must enter your unique Stream Key(s) for the services that you want the container to multi-stream to.  To this by locating your stream key from the settings of your streaming service provider(s) and copy/paste your stream key into the relevant **'Value'** section for the **\<Provider\>\_KEY** variable.
   
-5. It is not required but if you do want to update the URL used for the streaming provider (i.e. to set a specific geoprahic ingest server for that provider), then you can do this from the 'Environment' tab also.
+ 1. It is not required but if you do want to update the URL used for the streaming provider (i.e. to set a specific geoprahic ingest server for that provider), then you can do this from the 'Environment' tab also.
 
 6. Click 'Apply' / 'Next' / 'Apply' and you're nginx-rtmps container should start.
 

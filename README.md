@@ -46,7 +46,7 @@ This should work for any streaming software that allows you to define a custom R
 ```bash
 rtmp://<Server IP Address / FQDN>:<Chosen Port Number>/live
 ```
-The stream key field in OBS / SLOBS can be left blank
+The _Stream Key_ field in OBS / SLOBS can be left blank
 
 Save your setting and you're now ready to 'go-live!'
 

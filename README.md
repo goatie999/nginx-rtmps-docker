@@ -2,7 +2,9 @@
 
 Docker container to enable local multi-streaming to different services via RTMP and RTMPS
 
-As of release **v0.2.5** / **latest**, this container is set to utilise 2 services, **[Restream.io](https://restream.io/?ref=qQ6BR)** and **[Facebook Live](https://www.facebook.com/live/producer)**.  This container makes use of _stunnel4_ in order to work with Facebook's specification that only supports RTMPS.  Stunnel4 is built as an internal service within this container to make this function correctly.
+As of release **v0.2.6** / **latest**, this container is set to utilise these services, **[Restream.io](https://restream.io/?ref=qQ6BR)**, **[Facebook Live](https://www.facebook.com/live/producer)** and **[Mixcloud](https://www.mixcloud.com/)**.  
+
+This container makes use of _stunnel4_ in order to work with Facebook's specification that only supports RTMPS.  Stunnel4 is built as an internal service within this container to make this function correctly.
 
 I'm setting this up with the intention that people host the container on a Synology NAS but it also runs just fine from other Docker setups (i.e. I've tested using Docker on OSX).
 
@@ -28,7 +30,7 @@ You don't have to use all of the providers in this setup, any that you leave the
 
 ## COMMAND LINE INSTRUCTIONS:
 
-* Streaming Providers: **FACEBOOK**, **RESTREAM**
+* Streaming Providers: **FACEBOOK**, **RESTREAM**, **MIXCLOUD**
 * Available environment variables:
     **\<Provider\>\_URL** - these are pre-defined for you and don't specifically need to be used.  They are provided in case alterations are required before I get up update the official release.
     **\<Provider\>\_KEY** - how you define your unique stream key that the container will consume on start

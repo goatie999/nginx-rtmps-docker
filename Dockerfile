@@ -33,6 +33,10 @@ ENV FACEBOOK_KEY ""
 ENV RESTREAM_URL rtmp://live.restream.io/live/
 ENV RESTREAM_KEY ""
 
+#MixCloud
+ENV MIXCLOUD_URL rtmp://rtmp.mixcloud.com/broadcast/
+ENV MIXCLOUD_KEY ""
+
 COPY entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh

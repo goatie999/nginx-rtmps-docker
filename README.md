@@ -2,7 +2,7 @@
 
 Docker container to enable local multi-streaming to different services via RTMP and RTMPS
 
-As of release **v0.2.7** / **latest**, this container is set to utilise these services, **[Restream.io](https://restream.io/?ref=qQ6BR)**, **[Facebook Live](https://www.facebook.com/live/producer)** **[YouTube](https://youtube.com)**, **[Twitch](https://twitch.tv)** and **[Mixcloud](https://www.mixcloud.com/)**.  
+As of release **v0.2.7** / **latest**, this container is set to utilise these services, **[Restream.io](https://restream.io/?ref=qQ6BR)**, **[Facebook Live](https://www.facebook.com/live/producer)**, **[YouTube](https://youtube.com)**, **[Twitch](https://twitch.tv)** and **[Mixcloud](https://www.mixcloud.com/)**.  
 
 This container makes use of _stunnel4_ in order to work with Facebook's specification that only supports RTMPS.  Stunnel4 is built as an internal service within this container to make this function correctly.
 

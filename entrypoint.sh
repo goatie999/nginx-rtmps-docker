@@ -42,7 +42,7 @@ fi
 if [ -n "${MIXCLOUD_KEY}" ]; then
 	echo "Mixcloud activated"
 	MIXCLOUD_KEY_esc=$(echo "$MIXCLOUD_KEY" | sed 's/[\*\.&]/\\&/g')
-	sed -i 's|#mixcloud|push '"$MIXCLOUD_URL""$MIXCLOUD_KEY"';|g' /etc/nginx/nginx.conf 
+	sed -i 's|#mixcloud|push '"$MIXCLOUD_URL""$MIXCLOUD_KEY_esc"';|g' /etc/nginx/nginx.conf 
 else 
     echo "No Mixcloud stream key set... disabling"
     sed -i 's|#mixcloud| |g' /etc/nginx/nginx.conf 

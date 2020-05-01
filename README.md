@@ -2,7 +2,7 @@
 
 Docker container to enable local multi-streaming to different services via RTMP and RTMPS
 
-As of release **v0.2.6** / **latest**, this container is set to utilise these services, **[Restream.io](https://restream.io/?ref=qQ6BR)**, **[Facebook Live](https://www.facebook.com/live/producer)** and **[Mixcloud](https://www.mixcloud.com/)**.  
+As of release **v0.2.7** / **latest**, this container is set to utilise these services, **[Restream.io](https://restream.io/?ref=qQ6BR)**, **[Facebook Live](https://www.facebook.com/live/producer)** **[YouTube](https://youtube.com)**, **[Twitch](https://twitch.tv)** and **[Mixcloud](https://www.mixcloud.com/)**.  
 
 This container makes use of _stunnel4_ in order to work with Facebook's specification that only supports RTMPS.  Stunnel4 is built as an internal service within this container to make this function correctly.
 
@@ -30,7 +30,9 @@ You don't have to use all of the providers in this setup, any that you leave the
 
 ## COMMAND LINE INSTRUCTIONS:
 
-* Streaming Providers: **FACEBOOK**, **RESTREAM**, **MIXCLOUD**
+If you're headed down the command line route, I'm assuming that you have a good idea of what Docker is and how it works.  However, just in case that's not the case, the simplest way to get Docker installed on your Windows PC or Mac it to head over to the **[Docker](https://www.docker.com/products/docker-desktop)** website and download / installed their packaged setups.
+
+* Streaming Providers: **FACEBOOK**, **RESTREAM**, **MIXCLOUD**, **YOUTUBE**, **TWITCH**
 * Available environment variables:
     **\<Provider\>\_URL** - these are pre-defined for you and don't specifically need to be used.  They are provided in case alterations are required before I get up update the official release.
     **\<Provider\>\_KEY** - how you define your unique stream key that the container will consume on start
@@ -65,5 +67,3 @@ GitHub: https://github.com/goatie999/nginx-rtmps-docker
 
 
 Restream.io affiliate link: https://restream.io/?ref=qQ6BR
-
-Facebook Live Producer: https://facebook.com/live/producer

@@ -33,6 +33,14 @@ ENV FACEBOOK_KEY ""
 ENV RESTREAM_URL rtmp://live.restream.io/live/
 ENV RESTREAM_KEY ""
 
+#YouTube
+ENV YOUTUBE_URL rtmp://a.rtmp.youtube.com/live2/
+ENV YOUTUBE_KEY ""
+
+#Twitch
+ENV TWITCH_URL rtmp://live.twitch.tv/app/
+ENV TWITCH_KEY ""
+
 #MixCloud
 ENV MIXCLOUD_URL rtmp://rtmp.mixcloud.com/broadcast/
 ENV MIXCLOUD_KEY ""

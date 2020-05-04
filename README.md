@@ -37,11 +37,13 @@ If you're headed down the command line route, I'm assuming that you have a good 
     **\<Provider\>\_URL** - these are pre-defined for you and don't specifically need to be used.  They are provided in case alterations are required before I get up update the official release.
     **\<Provider\>\_KEY** - how you define your unique stream key that the container will consume on start
 ```bash
-docker run -d -p <your port>:1935 
-   -e <Provider1>_KEY=<your Provider 1 stream key> 
-   -e <Provider2>_KEY=<your Provider 2 stream key> 
+sudo docker run -d -p <your port>:1935 \
+   -e <Provider1>_KEY="<your Provider 1 stream key>" \
+   -e <Provider2>_KEY="<your Provider 2 stream key>" \
    goatie999/nginx-rtmps:<tag>
 ```
+Ideally, the above command line entry is done over a single continuous line of text, but doing it over multiple lines is possible as long as you use the _line-continuation_ notation.
+
 
 
 ## STREAMING SOFTWARE SETUP:
